@@ -1,4 +1,13 @@
-module Gate_2(input A, input B, input C, output F, output G, output Times, output Sums);
+module Gate_2
+(
+    input A, 
+    input B, 
+    input C, 
+    output F, 
+    output G, 
+    output Times, 
+    output Sums
+);
 
     wire XOR1, AND1, AND2;
 

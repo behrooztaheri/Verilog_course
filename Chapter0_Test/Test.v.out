@@ -7,17 +7,17 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_000002b7c40e2d00 .scope module, "xor_gate" "xor_gate" 2 1;
+S_000001a984ef2d00 .scope module, "xor_gate" "xor_gate" 2 1;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "Out";
-o000002b7c41168b8 .functor BUFZ 1, C4<z>; HiZ drive
-o000002b7c41168e8 .functor BUFZ 1, C4<z>; HiZ drive
-L_000002b7c40e33b0 .functor XOR 1, o000002b7c41168b8, o000002b7c41168e8, C4<0>, C4<0>;
-v000002b7c40e37f0_0 .net "Out", 0 0, L_000002b7c40e33b0;  1 drivers
-v000002b7c40e35d0_0 .net "a", 0 0, o000002b7c41168b8;  0 drivers
-v000002b7c40e2e90_0 .net "b", 0 0, o000002b7c41168e8;  0 drivers
+o000001a984f268b8 .functor BUFZ 1, C4<z>; HiZ drive
+o000001a984f268e8 .functor BUFZ 1, C4<z>; HiZ drive
+L_000001a984ef33b0 .functor XOR 1, o000001a984f268b8, o000001a984f268e8, C4<0>, C4<0>;
+v000001a984ef37f0_0 .net "Out", 0 0, L_000001a984ef33b0;  1 drivers
+v000001a984ef35d0_0 .net "a", 0 0, o000001a984f268b8;  0 drivers
+v000001a984ef2e90_0 .net "b", 0 0, o000001a984f268e8;  0 drivers
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";

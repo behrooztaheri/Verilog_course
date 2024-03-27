@@ -1,0 +1,43 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000263b7078e20 .scope module, "Gate_2" "Gate_2" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "C";
+    .port_info 3 /OUTPUT 1 "F";
+    .port_info 4 /OUTPUT 1 "G";
+    .port_info 5 /OUTPUT 1 "Times";
+    .port_info 6 /OUTPUT 1 "Sums";
+o00000263b70c6f98 .functor BUFZ 1, C4<z>; HiZ drive
+o00000263b70c7028 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000263b7079180 .functor XOR 1, o00000263b70c6f98, o00000263b70c7028, C4<0>, C4<0>;
+o00000263b70c7058 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000263b7078540 .functor XOR 1, L_00000263b7079180, o00000263b70c7058, C4<0>, C4<0>;
+L_00000263b70937d0 .functor AND 1, L_00000263b7079180, o00000263b70c7058, C4<1>, C4<1>;
+L_00000263b707eeb0 .functor AND 1, o00000263b70c6f98, o00000263b70c7028, C4<1>, C4<1>;
+L_00000263b707e340 .functor OR 1, L_00000263b70937d0, L_00000263b707eeb0, C4<0>, C4<0>;
+v00000263b70935b0_0 .net "A", 0 0, o00000263b70c6f98;  0 drivers
+v00000263b7078fb0_0 .net "AND1", 0 0, L_00000263b70937d0;  1 drivers
+v00000263b70930e0_0 .net "AND2", 0 0, L_00000263b707eeb0;  1 drivers
+v00000263b70784a0_0 .net "B", 0 0, o00000263b70c7028;  0 drivers
+v00000263b70c1ac0_0 .net "C", 0 0, o00000263b70c7058;  0 drivers
+v00000263b70c2880_0 .net "F", 0 0, L_00000263b7078540;  1 drivers
+v00000263b70c1d40_0 .net "G", 0 0, L_00000263b707e340;  1 drivers
+v00000263b70c1ca0_0 .net "Sums", 0 0, L_00000263b70c2380;  1 drivers
+v00000263b70c1e80_0 .net "Times", 0 0, L_00000263b70c2600;  1 drivers
+v00000263b70c22e0_0 .net "XOR1", 0 0, L_00000263b7079180;  1 drivers
+L_00000263b70c2600 .arith/mult 1, o00000263b70c6f98, o00000263b70c7028;
+L_00000263b70c2380 .arith/sum 1, L_00000263b7079180, L_00000263b70937d0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Gate2.v";

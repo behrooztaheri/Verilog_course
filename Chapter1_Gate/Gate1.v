@@ -1,4 +1,11 @@
-module Gate_1(input A, input B, input C, output F, output G);
+module Gate_1
+(
+    input A, 
+    input B, 
+    input C, 
+    output F, 
+    output G
+);
 
     xor(XOR1,A,B);
     xor(F,XOR1,C);
