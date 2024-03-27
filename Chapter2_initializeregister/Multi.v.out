@@ -1,0 +1,33 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000018a11172ce0 .scope module, "Multi_8_bit" "Multi_8_bit" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /OUTPUT 16 "C";
+o0000018a111a6fb8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000018a11173520_0 .net "A", 7 0, o0000018a111a6fb8;  0 drivers
+o0000018a111a6fe8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0000018a11172e70_0 .net "B", 7 0, o0000018a111a6fe8;  0 drivers
+v0000018a11172f10_0 .net "C", 15 0, L_0000018a1128ec70;  1 drivers
+v0000018a11172fb0_0 .net *"_ivl_0", 15 0, L_0000018a1128eb30;  1 drivers
+L_0000018a111ebc18 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0000018a11173050_0 .net *"_ivl_3", 7 0, L_0000018a111ebc18;  1 drivers
+v0000018a111730f0_0 .net *"_ivl_4", 15 0, L_0000018a1128ebd0;  1 drivers
+L_0000018a111ebc60 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0000018a1128ea90_0 .net *"_ivl_7", 7 0, L_0000018a111ebc60;  1 drivers
+L_0000018a1128eb30 .concat [ 8 8 0 0], o0000018a111a6fb8, L_0000018a111ebc18;
+L_0000018a1128ebd0 .concat [ 8 8 0 0], o0000018a111a6fe8, L_0000018a111ebc60;
+L_0000018a1128ec70 .arith/mult 16, L_0000018a1128eb30, L_0000018a1128ebd0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Multi.v";
