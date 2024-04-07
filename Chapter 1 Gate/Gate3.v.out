@@ -1,0 +1,29 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000221c3de2f30 .scope module, "Gate_3" "Gate_3" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "S";
+    .port_info 2 /OUTPUT 1 "C";
+o00000221c3e16ef8 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000221c3e57f68 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_00000221c3e16740 .functor XOR 1, o00000221c3e16ef8, L_00000221c3e57f68, C4<0>, C4<0>;
+L_00000221c3e57fb0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_00000221c3e169a0 .functor AND 1, o00000221c3e16ef8, L_00000221c3e57fb0, C4<1>, C4<1>;
+v00000221c3de35e0_0 .net "A", 0 0, o00000221c3e16ef8;  0 drivers
+v00000221c3de3a20_0 .net "C", 0 0, L_00000221c3e169a0;  1 drivers
+v00000221c3de3800_0 .net "S", 0 0, L_00000221c3e16740;  1 drivers
+v00000221c3e16900_0 .net "m", 0 0, L_00000221c3e57fb0;  1 drivers
+v00000221c3e166a0_0 .net "n", 0 0, L_00000221c3e57f68;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Gate3.v";

@@ -1,0 +1,47 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000019fc8662f30 .scope module, "JK_Flip_Flop" "JK_Flip_Flop" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "J";
+    .port_info 1 /INPUT 1 "K";
+    .port_info 2 /INPUT 1 "Clk";
+    .port_info 3 /OUTPUT 1 "Q";
+    .port_info 4 /OUTPUT 1 "Q_prime";
+o0000019fc8696fc8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000019fc8696f98 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000019fc85091d0 .functor AND 1, o0000019fc8696fc8, o0000019fc8696f98, C4<1>, C4<1>;
+L_0000019fc85095c0 .functor AND 1, L_0000019fc85091d0, L_0000019fc8663130, C4<1>, C4<1>;
+L_0000019fc8663a40 .functor NOT 1, L_0000019fc85095c0, C4<0>, C4<0>, C4<0>;
+o0000019fc8696ff8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000019fc8663600 .functor AND 1, o0000019fc8696ff8, o0000019fc8696f98, C4<1>, C4<1>;
+L_0000019fc850ed40 .functor AND 1, L_0000019fc8663600, L_0000019fc850c410, C4<1>, C4<1>;
+L_0000019fc850c330 .functor NOT 1, L_0000019fc850ed40, C4<0>, C4<0>, C4<0>;
+L_0000019fc850c3a0 .functor AND 1, L_0000019fc8663a40, L_0000019fc8663130, C4<1>, C4<1>;
+L_0000019fc850c410 .functor NOT 1, L_0000019fc850c3a0, C4<0>, C4<0>, C4<0>;
+L_0000019fc86630c0 .functor AND 1, L_0000019fc850c330, L_0000019fc850c410, C4<1>, C4<1>;
+L_0000019fc8663130 .functor NOT 1, L_0000019fc86630c0, C4<0>, C4<0>, C4<0>;
+v0000019fc8663820_0 .net "Clk", 0 0, o0000019fc8696f98;  0 drivers
+v0000019fc8509520_0 .net "J", 0 0, o0000019fc8696fc8;  0 drivers
+v0000019fc8509130_0 .net "K", 0 0, o0000019fc8696ff8;  0 drivers
+v0000019fc8691c50_0 .net "Q", 0 0, L_0000019fc850c410;  1 drivers
+v0000019fc8691bb0_0 .net "Q_prime", 0 0, L_0000019fc8663130;  1 drivers
+v0000019fc86917f0_0 .net "R", 0 0, L_0000019fc8663a40;  1 drivers
+v0000019fc8691890_0 .net "S", 0 0, L_0000019fc850c330;  1 drivers
+v0000019fc8691a70_0 .net *"_ivl_0", 0 0, L_0000019fc85091d0;  1 drivers
+v0000019fc8691070_0 .net *"_ivl_12", 0 0, L_0000019fc850c3a0;  1 drivers
+v0000019fc8691f70_0 .net *"_ivl_16", 0 0, L_0000019fc86630c0;  1 drivers
+v0000019fc8691110_0 .net *"_ivl_2", 0 0, L_0000019fc85095c0;  1 drivers
+v0000019fc86916b0_0 .net *"_ivl_6", 0 0, L_0000019fc8663600;  1 drivers
+v0000019fc8691750_0 .net *"_ivl_8", 0 0, L_0000019fc850ed40;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "JK_Flip_Flap.v";
