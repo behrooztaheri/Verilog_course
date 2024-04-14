@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000216aadf2f30 .scope module, "D_Flip_Flop" "D_Flip_Flop" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "D";
+    .port_info 1 /INPUT 1 "Clk";
+    .port_info 2 /OUTPUT 1 "Q";
+    .port_info 3 /OUTPUT 1 "Q_prime";
+o00000216aae27008 .functor BUFZ 1, C4<z>; HiZ drive
+o00000216aae26fd8 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000216aadf33d0 .functor AND 1, o00000216aae27008, o00000216aae26fd8, C4<1>, C4<1>;
+L_00000216aafaac60 .functor NOT 1, L_00000216aadf33d0, C4<0>, C4<0>, C4<0>;
+L_00000216aadf3600 .functor AND 1, L_00000216aafaac60, L_00000216aafae7b0, C4<1>, C4<1>;
+L_00000216aadf3a40 .functor NOT 1, L_00000216aadf3600, C4<0>, C4<0>, C4<0>;
+L_00000216aafae5f0 .functor NOT 1, o00000216aae27008, C4<0>, C4<0>, C4<0>;
+L_00000216aafae660 .functor AND 1, L_00000216aafae5f0, o00000216aae26fd8, C4<1>, C4<1>;
+L_00000216aafae6d0 .functor NOT 1, L_00000216aafae660, C4<0>, C4<0>, C4<0>;
+L_00000216aafae740 .functor AND 1, L_00000216aafae6d0, L_00000216aadf3a40, C4<1>, C4<1>;
+L_00000216aafae7b0 .functor NOT 1, L_00000216aafae740, C4<0>, C4<0>, C4<0>;
+v00000216aadf3820_0 .net "Clk", 0 0, o00000216aae26fd8;  0 drivers
+v00000216aafaabc0_0 .net "D", 0 0, o00000216aae27008;  0 drivers
+v00000216aadf30c0_0 .net "Q", 0 0, L_00000216aadf3a40;  1 drivers
+v00000216aadf3160_0 .net "Q_prime", 0 0, L_00000216aafae7b0;  1 drivers
+v00000216aadf3200_0 .net *"_ivl_0", 0 0, L_00000216aadf33d0;  1 drivers
+v00000216aadf32a0_0 .net *"_ivl_10", 0 0, L_00000216aafae660;  1 drivers
+v00000216aae20e00_0 .net *"_ivl_12", 0 0, L_00000216aafae6d0;  1 drivers
+v00000216aae21300_0 .net *"_ivl_14", 0 0, L_00000216aafae740;  1 drivers
+v00000216aae213a0_0 .net *"_ivl_2", 0 0, L_00000216aafaac60;  1 drivers
+v00000216aae20860_0 .net *"_ivl_4", 0 0, L_00000216aadf3600;  1 drivers
+v00000216aae21080_0 .net *"_ivl_8", 0 0, L_00000216aafae5f0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "D_Flip_Flop.v";

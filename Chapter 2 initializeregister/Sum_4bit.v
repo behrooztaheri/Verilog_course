@@ -4,6 +4,6 @@ module Sum_4bit(
     output [4:0] C
 );
 
-    assign C = A + B;-
+    assign C = A + B;
 
 endmodule
