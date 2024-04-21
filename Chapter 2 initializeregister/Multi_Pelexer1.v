@@ -9,6 +9,6 @@ module Multiplexer(
 );
 
     assign Y = (S1 == 0 && S2 == 0)? X1: (S1 == 0 && S2 == 1)? X2:
-                (S1 == 0 && S2 == 0)? X3: (S1 == 1 && S2 == 1)? X4: 0;
+                (S1 == 1 && S2 == 0)? X3: (S1 == 1 && S2 == 1)? X4: 0;
 
 endmodule

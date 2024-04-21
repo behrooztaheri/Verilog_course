@@ -1,0 +1,69 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001b8ab52ed80 .scope module, "Decoder" "Decoder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "en";
+    .port_info 1 /INPUT 2 "X";
+    .port_info 2 /OUTPUT 4 "Y";
+o000001b8ab576fd8 .functor BUFZ 2, C4<zz>; HiZ drive
+v000001b8ab565be0_0 .net "X", 1 0, o000001b8ab576fd8;  0 drivers
+v000001b8ab5656e0_0 .net "Y", 3 0, L_000001b8ab5baf80;  1 drivers
+v000001b8ab565640_0 .net *"_ivl_0", 31 0, L_000001b8ab5bbe80;  1 drivers
+L_000001b8ab5bc940 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v000001b8ab5660e0_0 .net/2u *"_ivl_10", 1 0, L_000001b8ab5bc940;  1 drivers
+v000001b8ab565c80_0 .net *"_ivl_12", 0 0, L_000001b8ab5bb340;  1 drivers
+L_000001b8ab5bc988 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565780_0 .net/2u *"_ivl_14", 3 0, L_000001b8ab5bc988;  1 drivers
+L_000001b8ab5bc9d0 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565500_0 .net/2u *"_ivl_16", 1 0, L_000001b8ab5bc9d0;  1 drivers
+v000001b8ab565d20_0 .net *"_ivl_18", 0 0, L_000001b8ab5bbac0;  1 drivers
+L_000001b8ab5bca18 .functor BUFT 1, C4<0010>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565aa0_0 .net/2u *"_ivl_20", 3 0, L_000001b8ab5bca18;  1 drivers
+L_000001b8ab5bca60 .functor BUFT 1, C4<10>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565e60_0 .net/2u *"_ivl_22", 1 0, L_000001b8ab5bca60;  1 drivers
+v000001b8ab565fa0_0 .net *"_ivl_24", 0 0, L_000001b8ab5bae40;  1 drivers
+L_000001b8ab5bcaa8 .functor BUFT 1, C4<0100>, C4<0>, C4<0>, C4<0>;
+v000001b8ab5658c0_0 .net/2u *"_ivl_26", 3 0, L_000001b8ab5bcaa8;  1 drivers
+L_000001b8ab5bcaf0 .functor BUFT 1, C4<11>, C4<0>, C4<0>, C4<0>;
+v000001b8ab566180_0 .net/2u *"_ivl_28", 1 0, L_000001b8ab5bcaf0;  1 drivers
+L_000001b8ab5bc868 .functor BUFT 1, C4<0000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565820_0 .net *"_ivl_3", 30 0, L_000001b8ab5bc868;  1 drivers
+v000001b8ab565a00_0 .net *"_ivl_30", 0 0, L_000001b8ab5bc420;  1 drivers
+L_000001b8ab5bcb38 .functor BUFT 1, C4<1000>, C4<0>, C4<0>, C4<0>;
+v000001b8ab566040_0 .net/2u *"_ivl_32", 3 0, L_000001b8ab5bcb38;  1 drivers
+L_000001b8ab5bcb80 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565dc0_0 .net/2u *"_ivl_34", 3 0, L_000001b8ab5bcb80;  1 drivers
+v000001b8ab565280_0 .net *"_ivl_36", 3 0, L_000001b8ab5bb2a0;  1 drivers
+v000001b8ab565f00_0 .net *"_ivl_38", 3 0, L_000001b8ab5baa80;  1 drivers
+L_000001b8ab5bc8b0 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v000001b8ab565320_0 .net/2u *"_ivl_4", 31 0, L_000001b8ab5bc8b0;  1 drivers
+v000001b8ab565b40_0 .net *"_ivl_40", 3 0, L_000001b8ab5bb3e0;  1 drivers
+v000001b8ab5653c0_0 .net *"_ivl_42", 3 0, L_000001b8ab5bc1a0;  1 drivers
+v000001b8ab565460_0 .net *"_ivl_6", 0 0, L_000001b8ab5bb160;  1 drivers
+L_000001b8ab5bc8f8 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v000001b8ab5655a0_0 .net/2u *"_ivl_8", 3 0, L_000001b8ab5bc8f8;  1 drivers
+o000001b8ab577458 .functor BUFZ 1, C4<z>; HiZ drive
+v000001b8ab5bada0_0 .net "en", 0 0, o000001b8ab577458;  0 drivers
+L_000001b8ab5bbe80 .concat [ 1 31 0 0], o000001b8ab577458, L_000001b8ab5bc868;
+L_000001b8ab5bb160 .cmp/eq 32, L_000001b8ab5bbe80, L_000001b8ab5bc8b0;
+L_000001b8ab5bb340 .cmp/eq 2, o000001b8ab576fd8, L_000001b8ab5bc940;
+L_000001b8ab5bbac0 .cmp/eq 2, o000001b8ab576fd8, L_000001b8ab5bc9d0;
+L_000001b8ab5bae40 .cmp/eq 2, o000001b8ab576fd8, L_000001b8ab5bca60;
+L_000001b8ab5bc420 .cmp/eq 2, o000001b8ab576fd8, L_000001b8ab5bcaf0;
+L_000001b8ab5bb2a0 .functor MUXZ 4, L_000001b8ab5bcb80, L_000001b8ab5bcb38, L_000001b8ab5bc420, C4<>;
+L_000001b8ab5baa80 .functor MUXZ 4, L_000001b8ab5bb2a0, L_000001b8ab5bcaa8, L_000001b8ab5bae40, C4<>;
+L_000001b8ab5bb3e0 .functor MUXZ 4, L_000001b8ab5baa80, L_000001b8ab5bca18, L_000001b8ab5bbac0, C4<>;
+L_000001b8ab5bc1a0 .functor MUXZ 4, L_000001b8ab5bb3e0, L_000001b8ab5bc988, L_000001b8ab5bb340, C4<>;
+L_000001b8ab5baf80 .functor MUXZ 4, L_000001b8ab5bc1a0, L_000001b8ab5bc8f8, L_000001b8ab5bb160, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "decoder.v";
