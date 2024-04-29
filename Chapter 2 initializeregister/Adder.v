@@ -4,7 +4,7 @@ module Adder(
     output [4:0] F
 );
 
-    assign F = X + Y;
+    assign F = X + Y; 
 
 endmodule
 
