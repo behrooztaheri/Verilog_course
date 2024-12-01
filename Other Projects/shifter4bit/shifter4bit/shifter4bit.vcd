@@ -1,0 +1,123 @@
+$date
+	Tue Jun 04 03:09:59 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module shifter4bit_tb $end
+$var wire 4 ! data_out [3:0] $end
+$var reg 1 " clk $end
+$var reg 4 # data_in [3:0] $end
+$var reg 1 $ rst $end
+$var reg 1 % sel $end
+$scope module shifter $end
+$var wire 1 " clk $end
+$var wire 4 & data_in [3:0] $end
+$var wire 4 ' data_out [3:0] $end
+$var wire 1 $ rst $end
+$var wire 1 % sel $end
+$var reg 4 ( reg1 [3:0] $end
+$var reg 4 ) reg2 [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx )
+bx (
+bx '
+b0 &
+0%
+1$
+b0 #
+0"
+bx !
+$end
+#5
+b0 !
+b0 '
+b0 )
+b0 (
+1"
+#10
+0"
+0$
+#15
+1"
+#20
+0"
+#25
+1"
+#30
+0"
+b101 #
+b101 &
+#35
+b101 (
+1"
+#40
+0"
+#45
+b10 !
+b10 '
+b10 )
+1"
+#50
+0"
+1%
+b1010 #
+b1010 &
+#55
+b1010 !
+b1010 '
+b1010 )
+b1010 (
+1"
+#60
+0"
+#65
+b100 !
+b100 '
+b100 )
+1"
+#70
+0"
+0%
+b1111 #
+b1111 &
+#75
+b101 !
+b101 '
+b101 )
+b1111 (
+1"
+#80
+0"
+#85
+b111 !
+b111 '
+b111 )
+1"
+#90
+0"
+1%
+b1 #
+b1 &
+#95
+b1110 !
+b1110 '
+b1110 )
+b1 (
+1"
+#100
+0"
+#105
+b10 !
+b10 '
+b10 )
+1"
+#110
+0"

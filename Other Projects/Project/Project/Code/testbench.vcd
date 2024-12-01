@@ -1,0 +1,166 @@
+$date
+	Fri Jun 07 00:41:42 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var wire 4 ! D [3:0] $end
+$var wire 1 " Cout $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % Cin $end
+$var reg 2 & S [1:0] $end
+$scope module ALU $end
+$var wire 4 ' A [3:0] $end
+$var wire 4 ( B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 2 ) S [1:0] $end
+$var wire 4 * not_B [3:0] $end
+$var wire 4 + carry [3:0] $end
+$var wire 4 , D [3:0] $end
+$var wire 1 " Cout $end
+$var reg 4 - mux_out [3:0] $end
+$scope module fa0 $end
+$var wire 1 % Cin $end
+$var wire 1 . X $end
+$var wire 1 / Y $end
+$var reg 1 0 Cout $end
+$var reg 1 1 Sum $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 2 Cin $end
+$var wire 1 3 X $end
+$var wire 1 4 Y $end
+$var reg 1 5 Cout $end
+$var reg 1 6 Sum $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 7 Cin $end
+$var wire 1 8 X $end
+$var wire 1 9 Y $end
+$var reg 1 : Cout $end
+$var reg 1 ; Sum $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 < Cin $end
+$var wire 1 = X $end
+$var wire 1 > Y $end
+$var reg 1 ? Cout $end
+$var reg 1 @ Sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+b0 -
+b0 ,
+b0 +
+b1111 *
+b0 )
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#60000
+b1 !
+b1 ,
+11
+b1101 *
+1.
+b10 $
+b10 (
+b1 #
+b1 '
+#120000
+1"
+1?
+17
+1<
+15
+1:
+0@
+12
+1/
+14
+19
+1>
+1;
+b1111 +
+10
+b101 !
+b101 ,
+11
+b101 *
+b1111 -
+18
+b1 &
+b1 )
+1%
+b1010 $
+b1010 (
+b101 #
+b101 '
+#180000
+0"
+0?
+0<
+0:
+07
+05
+02
+b0 +
+00
+1;
+0/
+04
+09
+0>
+16
+1@
+b1111 !
+b1111 ,
+11
+b1111 *
+b0 -
+13
+1=
+b10 &
+b10 )
+0%
+b0 $
+b0 (
+b1111 #
+b1111 '
+#240000

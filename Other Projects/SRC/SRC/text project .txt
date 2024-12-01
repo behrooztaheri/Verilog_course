@@ -1,0 +1,127 @@
+module Full_Adder_16bit(
+input [15:0] A,
+input [15:0] B,
+output [15:0] Sum,
+output Cout
+);
+
+wire [15:0] S, C;
+
+genvar i;
+generate
+for (i = 0; i < 16; i = i + 1) begin
+Half_Adder adder(
+.A(A[i]),
+.B(B[i]),
+.Sum(S[i]),
+.Cout(C[i])
+);
+end
+endgenerate
+
+genvar j;
+generate
+for (j = 1; j < 16; j = j + 1) begin
+Carry_Block carry_block(
+.Cin(C[j-1]),
+.S(S[j-1]),
+.A(A[j]),
+.B(B[j]),
+.Sum(S[j]),
+.Cout(C[j])
+);
+end
+endgenerate
+
+assign Sum = S;
+assign Cout = C[15];
+
+endmodule
+
+module Half_Adder(
+input A,
+input B,
+output Sum,
+output Cout
+);
+
+xor (Sum, A, B);
+and (Cout, A, B);
+
+endmodule
+
+module Carry_Block(
+input Cin,
+input S,
+input A,
+input B,
+output Sum,
+output Cout
+);
+
+xor (Sum, S, A, B);
+and (Cout1, Cin, S);
+and (Cout2, A, B);
+or (Cout, Cout1, Cout2);
+
+endmodule
+
+module AC_register (
+input clk,
+input rst,
+input LD,
+input INR,
+input CLR,
+input [15:0] data_in,
+output reg [15:0] AC_out
+);
+always @(posedge clk or posedge rst) begin
+if (rst)
+AC_out <= 16'b0;
+else if (CLR)
+AC_out <= 16'b0;
+else if (LD)
+AC_out <= data_in;
+else if (INR)
+AC_out <= AC_out + 1;
+end
+endmodule
+
+module adder_logical (
+input [15:0] DR,
+input [7:0] INPR,
+output [15:0] sum_out
+);
+assign sum_out = DR + {8'b0, INPR}; // Assuming zero extension for INPR
+endmodule
+
+module control_gates (
+input clk,
+input rst,
+input LD,
+input INR,
+input CLR,
+input [15:0] DR,
+input [7:0] INPR,
+output [15:0] AC_out
+);
+wire [15:0] sum_out;
+
+// Instantiate adder_logical module
+adder_logical adder_log_inst (
+.DR(DR),
+.INPR(INPR),
+.sum_out(sum_out)
+);
+
+// Instantiate AC_register module
+AC_register AC_reg_inst (
+.clk(clk),
+.rst(rst),
+.LD(LD),
+.INR(INR),
+.CLR(CLR),
+.data_in(sum_out),
+.AC_out(AC_out)
+);
+endmodule

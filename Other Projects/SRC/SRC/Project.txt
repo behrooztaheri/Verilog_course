@@ -1,0 +1,69 @@
+// Testbench for the control_gates module
+
+//gtkwave
+`timescale 1ns/1ps
+`include "SRC.v"
+
+module tb_control_gates;
+reg clk;
+reg rst;
+reg LD;
+reg INR;
+reg CLR;
+reg [15:0] DR;
+reg [7:0] INPR;
+wire [15:0] AC_out;
+
+control_gates uut (
+.clk(clk),
+.rst(rst),
+.LD(LD),
+.INR(INR),
+.CLR(CLR),
+.DR(DR),
+.INPR(INPR),
+.AC_out(AC_out)
+);
+
+initial begin
+    $dumpfile("tb_control_gates.vcd");
+    $dumpvars(0,tb_control_gates);
+    end
+
+initial begin
+// Initialize signals
+clk = 0;
+rst = 1;
+LD = 0;
+INR = 0;
+CLR = 0;
+DR = 16'h0000;
+INPR = 8'h00;
+#5 rst = 0;
+
+// Test Load operation
+#10 DR = 16'h1234;
+INPR = 8'h12;
+LD = 1;
+#10 LD = 0;
+
+// Test Increment operation
+#10 INR = 1;
+#10 INR = 0;
+
+// Test Clear operation
+#10 CLR = 1;
+#10 CLR = 0;
+
+// Finish simulation
+#10 $finish;
+end
+
+// Clock generation
+always #5 clk = ~clk;
+
+// Monitor output
+initial begin
+$monitor("Time: %d, AC_out: %h", $time, AC_out);
+end
+endmodule
