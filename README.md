@@ -1,6 +1,6 @@
 # QIAU Logic Circuits and Computer Architecture Laboratory
 
-This repository contains Verilog code examples related to the Logic Circuits and Computer Architecture Laboratory course at QIAU (Qazvin Islamic Azad University).
+This repository contains **Verilog** and **VHDL** code examples related to the Logic Circuits and Computer Architecture Laboratory course at QIAU (Qazvin Islamic Azad University).
 
 ## About the Course
 
@@ -10,9 +10,14 @@ The Logic Circuits and Computer Architecture Laboratory course is designed to pr
 
 The repository includes the following:
 
-- Verilog source code files for various laboratory experiments.
+- Verilog and VHDL source code files for various laboratory experiments.
 - Documentation and explanations for each experiment.
 - Supplementary materials and resources.
+
+## Important Note about VHDL Code
+
+The **VHDL code** included in this repository has been generated with the help of **ChatGPT-4**. While efforts have been made to ensure its accuracy, there is a possibility of errors or inefficiencies. If you find any issues or have suggestions for improvement, please let us know.
+
 
 ## How to Use
 
